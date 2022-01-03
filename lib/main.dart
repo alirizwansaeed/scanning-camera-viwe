@@ -1,5 +1,4 @@
 import 'package:camera/camera.dart';
-import 'package:custom_camera_view/id_page/id_page.dart';
 import 'package:custom_camera_view/wrapper.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Wrapper(),
+      home: const Wrapper(),
     );
   }
 }

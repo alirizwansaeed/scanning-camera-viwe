@@ -18,19 +18,19 @@ class Wrapper extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => IdPage(),
+                      builder: (context) => const IdPage(),
                     ));
               },
-              child: Text('Id page')),
+              child: const Text('Id page')),
           ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VideoRecordPage(),
+                      builder: (context) => const VideoRecordPage(),
                     ));
               },
-              child: Text('video record page'))
+              child: const Text('video record page'))
         ],
       ),
     ));

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:camera/camera.dart';
 import 'package:custom_camera_view/main.dart';
 import 'package:delayed_display/delayed_display.dart';
@@ -77,7 +75,7 @@ class _IdPageState extends State<IdPage> with SingleTickerProviderStateMixin {
                   _cameraController!,
                   child: Stack(
                     children: [
-                      BlackMashWithCardHole(),
+                      const BlackMashWithCardHole(),
                       WaveAnimationOnCardHole(alignmentTween: _alignmentTween),
                       SafeArea(
                         child: Padding(
@@ -86,23 +84,24 @@ class _IdPageState extends State<IdPage> with SingleTickerProviderStateMixin {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               DelayedDisplay(
-                                slidingBeginOffset: Offset(-.35, 0),
+                                slidingBeginOffset: const Offset(-.35, 0),
                                 child: Container(
-                                  padding: EdgeInsets.all(6),
+                                  padding: const EdgeInsets.all(6),
                                   decoration: BoxDecoration(
-                                    color: Color(0xFF848685).withOpacity(.5),
+                                    color:
+                                        const Color(0xFF848685).withOpacity(.5),
                                     borderRadius: BorderRadius.circular(6),
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.chevron_left,
                                     color: Colors.white,
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 40,
                               ),
-                              DelayedDisplay(
+                              const DelayedDisplay(
                                 slidingBeginOffset: Offset(.35, 0),
                                 delay: Duration(milliseconds: 200),
                                 child: Padding(
@@ -113,8 +112,8 @@ class _IdPageState extends State<IdPage> with SingleTickerProviderStateMixin {
                                   ),
                                 ),
                               ),
-                              Spacer(),
-                              DelayedDisplay(
+                              const Spacer(),
+                              const DelayedDisplay(
                                 slidingBeginOffset: Offset(0, -.35),
                                 delay: Duration(milliseconds: 400),
                                 child: Center(
@@ -129,11 +128,11 @@ class _IdPageState extends State<IdPage> with SingleTickerProviderStateMixin {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               ),
                               DelayedDisplay(
-                                delay: Duration(milliseconds: 600),
+                                delay: const Duration(milliseconds: 600),
                                 slidingBeginOffset: const Offset(0.0, 1),
                                 child: SizedBox(
                                   width: double.infinity,
@@ -148,7 +147,7 @@ class _IdPageState extends State<IdPage> with SingleTickerProviderStateMixin {
                                             shape: BoxShape.circle,
                                             color: Colors.white,
                                             border: Border.all(
-                                              color: Color(0xFFFDD401),
+                                              color: const Color(0xFFFDD401),
                                               width: 3,
                                             ),
                                           ),
@@ -159,11 +158,11 @@ class _IdPageState extends State<IdPage> with SingleTickerProviderStateMixin {
                                         child: Container(
                                           height: 50,
                                           width: 50,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             shape: BoxShape.circle,
                                             color: Color(0xFF83B000),
                                           ),
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.done,
                                             color: Colors.white,
                                           ),
@@ -173,7 +172,7 @@ class _IdPageState extends State<IdPage> with SingleTickerProviderStateMixin {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               )
                             ],
@@ -203,7 +202,7 @@ class WaveAnimationOnCardHole extends StatelessWidget {
     return Align(
       alignment: Alignment.center,
       child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 500, minWidth: 200),
+        constraints: const BoxConstraints(maxWidth: 500, minWidth: 200),
         child: AspectRatio(
           aspectRatio: 1.586,
           child: Container(
@@ -265,7 +264,7 @@ class BlackMashWithCardHole extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: ConstrainedBox(
-              constraints: BoxConstraints(maxWidth: 500, minWidth: 200),
+              constraints: const BoxConstraints(maxWidth: 500, minWidth: 200),
               child: AspectRatio(
                 aspectRatio: 1.586,
                 child: Stack(
